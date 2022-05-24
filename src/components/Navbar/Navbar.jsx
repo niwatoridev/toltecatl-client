@@ -8,11 +8,7 @@ import logo from "../../images/logo-3.png"
 const Navbar = (props) => {
   return (
     <nav>
-    
-        <div>
-
-        </div>
-        <div>
+        <div className="logoInNav">
         <Link to={PATHS.HOMEPAGE}><img className="logoNav" src={logo} alt="logo"></img>
         </Link>
         </div>

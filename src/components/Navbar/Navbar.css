@@ -9,6 +9,11 @@ nav {
   font-weight: 600;
 }
 
+.logoInNav {
+margin  : 10px;
+
+}
+
 .logoutBtn {
   margin-left: 50px;
 }
