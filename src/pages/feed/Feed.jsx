@@ -1,15 +1,19 @@
 import React from "react";
-import * as PATHS from "../../utils/paths";
 import { Link } from "react-router-dom";
+import FeedLine from "../../components/Feed/Line/FeedLine";
+import FeedButtons from "../../components/Feed/Buttons/FeedButtons";
+import "./feed.css"
 
 const FeedPage = () => {
   return (
-    <div>
+  <div className="FeedMatrix">
       <div>
-        <h1>Este es el FEED</h1>
+        <FeedLine/>
       </div>
-      
-    </div>
+      <div>
+        <FeedButtons/>
+      </div>
+  </div>
   );
 };
 
