@@ -2,9 +2,10 @@ import { Navigate } from "react-router-dom";
 import HomePage from "../pages/HomePage";
 import Login from "../pages/LogIn";
 import Signup from "../pages/Signup";
-import Works from "../pages/Works";
-import AddWork from "../pages/AddWorks";
+import Works from "../pages/works/Works";
+import AddWork from "../pages/works/AddWorks";
 import ProtectedPage from "../pages/ProtectedPage";
+import Feed from "../pages/feed/Feed"
 import * as PATHS from "../utils/paths";
 
 const routes = (props) => {
@@ -31,10 +32,10 @@ const routes = (props) => {
       path: PATHS.WORKS,
       element: <Works {...props} />,
     },
-    {
-      path: PATHS.PROTECTEDPAGE,
+        {
+      path: PATHS.FEED,
       element: user ? (
-        <ProtectedPage {...props} />
+        <Feed {...props} />
       ) : (
         <Navigate to={PATHS.LOGINPAGE} replace />
       ),
@@ -47,3 +48,4 @@ export default routes;
 
 export const ADDWORK = "/works/add"
 export const WORKS = "/works"
+export const FEED = "/feed"

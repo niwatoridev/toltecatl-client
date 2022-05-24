@@ -1,0 +1,29 @@
+.addWorkForm {
+  display: flex;
+  flex-direction: column;
+  width: 500px;
+}
+
+.addWorkMain {
+  display: flex;
+  flex-direction: row;
+  justify-content: center
+}
+
+.previewAddWork {
+  max-width: 500px;
+  margin-left: 100px;
+}
+
+.imgAddWorkPreview {
+  width: 250px;
+}
+
+.framePreview {
+  display: flex;
+  flex-direction: row;
+}
+
+.framePreviewChildTwo{
+margin-left: 15px;
+}

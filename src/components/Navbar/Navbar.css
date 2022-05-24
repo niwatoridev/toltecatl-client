@@ -1,16 +1,52 @@
 nav {
   display: flex;
-  padding: 1em;
-  justify-content: space-around;
+  flex-direction: row;
+  padding-right: 1em;
+  justify-content: space-between;
+  align-items: center;
   flex-wrap: wrap;
-  background: #282c34;
+  background: white;
   font-weight: 600;
+}
+
+.logoutBtn {
+  margin-left: 50px;
+}
+
+.logoNav {
+  height: 50px;
+  position: relative;
+  
+}
+
+.fullNav { 
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 
 .nav__projectName {
   color: #e4f9ff;
   text-decoration: none;
 }
+
+.workLink {
+  color: #24939e;
+  text-decoration: none;
+  transition: color 0.2s ease-in-out;
+ }
+
+ .workLink + .workLink {
+  padding: 1em;
+
+ }
+
+
+ .workLink:hover {
+  color: #ffffff;
+}
+
+
 
 .authLink {
   color: #61dafb;
