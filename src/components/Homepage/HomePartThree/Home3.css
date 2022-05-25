@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Macondo&display=swap');
+
+.main3 {
+width: 100%;
+height: 870px;
+background-color: #fde8da;
+/* border: 5px solid black; */
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+
+.divider {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.dividerChild1 {
+    width: 50%;
+    margin-top: 50px;
+}
+
+.dividerChild2 {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin-top: 50px;
+    margin-left: 100px;
+    align-items: center;
+}
+
+.snakeImg {
+    width: 150px;
+}
+
+
+.text {
+font-family: 'Macondo', cursive;
+}

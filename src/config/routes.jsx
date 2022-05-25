@@ -7,9 +7,22 @@ import AddWork from "../pages/works/AddWorks";
 import ProtectedPage from "../pages/ProtectedPage";
 import Feed from "../pages/feed/Feed"
 import * as PATHS from "../utils/paths";
+import Loading from "../components/Loading"
+
+function validateRoute({isLoading, ...rest}, Component) {
+
+  if (isLoading) {
+    return <Loading/>
+  } 
+  if (!rest.user) {
+  return <Navigate to={PATHS.LOGINPAGE} replace />
+  }
+
+  return <Component {...rest} />
+} 
 
 const routes = (props) => {
-  const { user } = props;
+  const { user, isLoading } = props;
   return [
     {
       path: PATHS.HOMEPAGE,
@@ -34,11 +47,7 @@ const routes = (props) => {
     },
         {
       path: PATHS.FEED,
-      element: user ? (
-        <Feed {...props} />
-      ) : (
-        <Navigate to={PATHS.LOGINPAGE} replace />
-      ),
+      element: validateRoute(props, Feed)
     },
   ];
 };

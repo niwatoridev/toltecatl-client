@@ -10,9 +10,6 @@ const FeedPage = () => {
       <div>
         <FeedLine/>
       </div>
-      <div>
-        <FeedButtons/>
-      </div>
   </div>
   );
 };

@@ -9,6 +9,7 @@ const FeedLine = (props) => {
         <FeedPost/>
         <FeedPost/>
         <FeedPost/>
+        <FeedPost/>
     </div>
   );
 };

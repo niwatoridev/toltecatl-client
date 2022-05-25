@@ -1,7 +1,6 @@
 nav {
   display: flex;
   flex-direction: row;
-  padding-right: 1em;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
@@ -10,7 +9,8 @@ nav {
 }
 
 .logoInNav {
-margin  : 10px;
+margin: 10px;
+margin-right: 177.215px;
 
 }
 
@@ -36,7 +36,7 @@ margin  : 10px;
 }
 
 .workLink {
-  color: #24939e;
+  color: #b42f24;
   text-decoration: none;
   transition: color 0.2s ease-in-out;
  }
@@ -48,13 +48,13 @@ margin  : 10px;
 
 
  .workLink:hover {
-  color: #ffffff;
+  color: black;
 }
 
 
 
 .authLink {
-  color: #61dafb;
+  color: #b42f24;
   text-decoration: none;
   transition: color 0.2s ease-in-out;
 }
@@ -64,7 +64,17 @@ margin  : 10px;
 }
 
 .authLink:hover {
-  color: #ffffff;
+  color: black;
+}
+
+.authLinkBtn {
+  color: white;
+  text-decoration: none;
+  transition: color 0.2s ease-in-out;
+}
+
+.authLinkBtn:hover {
+  color: #b42f24;
 }
 
 .nav-logoutbtn {
@@ -72,12 +82,12 @@ margin  : 10px;
   font-weight: inherit;
   padding: 0.5em 1em;
   margin-left: 1em;
-  background-color: #5595ff;
+  background-color: #b42f24;
   box-shadow: 0 0 5px 0 aliceblue;
   border: none;
   border-radius: 2px;
   cursor: pointer;
-  color: #e3f2ff;
+  color: white;
   transition: all 0.2s ease-in-out;
   position: sticky;
   top: 0;
@@ -85,5 +95,5 @@ margin  : 10px;
 
 .nav-logoutbtn:hover {
   transform: scale(1.05);
-  background-color: #d13e3e;
+  background-color: #f7e7da;
 }

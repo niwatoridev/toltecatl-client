@@ -13,7 +13,7 @@ export default function App() {
   useEffect(() => {
     const accessToken = USER_HELPERS.getUserToken();
     if (!accessToken) {
-      return setIsLoading(false);
+      setIsLoading(true);
     }
     getLoggedIn(accessToken).then((res) => {
       if (!res.status) {
@@ -53,7 +53,7 @@ export default function App() {
     <div className="App">
       <Navbar handleLogout={handleLogout} user={user} />
       <Routes>
-        {routes({ user, authenticate, handleLogout }).map((route) => (
+        {routes({ user, authenticate, handleLogout, isLoading }).map((route) => (
           <Route key={route.path} path={route.path} element={route.element} />
         ))}
       </Routes>
