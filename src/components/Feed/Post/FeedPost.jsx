@@ -22,7 +22,7 @@ const FeedPost = (props) => {
   const [ works, setWorks ] = useState([])
 
     useEffect(() => {
-      fetch('http://localhost:5005/api/feed', {
+      fetch(`${process.env.REACT_APP_SERVER_URL}/feed`, {
       method: "GET",
       headers: {
         'Accept': 'application/json',

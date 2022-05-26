@@ -20,7 +20,7 @@ const WorksPage = (props) => {
 
 
 
-let linkFetch = 'http://localhost:5005/api/portfolio/' + props.user._id
+let linkFetch = `${process.env.REACT_APP_SERVER_URL}/portfolio/` + props.user._id
 
 useEffect(() => {
   fetch(linkFetch, {

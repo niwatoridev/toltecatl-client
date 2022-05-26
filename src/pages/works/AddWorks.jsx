@@ -173,7 +173,7 @@ const WorksPage = (props) => {
   
   const onSubmit = e => {
     e.preventDefault();
-    fetch('http://localhost:5005/api/works', {
+    fetch(`${process.env.REACT_APP_SERVER_URL}/works`, {
       method: "POST",
       headers: {
         'Accept': 'application/json',

@@ -10,7 +10,7 @@ const Like = (props) => {
 // console.log("like", props.user._id)
 
 // e.preventDefault();
-//     fetch('http://localhost:5005/api/works', {
+//     fetch(`${process.env.REACT_APP_SERVER_URL}`/works', {
 //       method: "POST",
 //       headers: {
 //         'Accept': 'application/json',
