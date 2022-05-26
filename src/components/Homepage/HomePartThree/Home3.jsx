@@ -14,7 +14,10 @@ const Home3 = (props) => {
         </div> */}
         <div className="divider">
             <div className="dividerChild2">
-                <Text className="text" fontSize='2xl'>Toltecatl es la primera plataforma hecha por mexicanos para mexicanos enfocada en impulsar las carreras artísticas de sus usuarios, promoviendo su trabajo en la plataforma y dándole herramientas a los autores como un portafolio digital, contacto con posibles compradores de comisiones y mucho más.</Text>
+                <Heading size='4xl' className="text" >Toltecatl</Heading>
+                <Heading size='md' className="text" >Del Nahuatl</Heading>
+                <Text className="text" fontSize='2xl'>1. (sust.) Maestro de algún arte</Text>
+                <Text className="text" fontSize='2xl'>2. (sust.) Edificador de edificios, el oficial</Text>
             </div>
             <div className="dividerChild1">
                 <Image

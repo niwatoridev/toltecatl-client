@@ -13,6 +13,11 @@
 
 }
 
+.parte1Post img {
+  height: 480px;
+  object-fit: cover;
+}
+
 .parte2PostCortometraje {
   display: flex;
   flex-direction: row;
@@ -45,8 +50,8 @@
 }
 
 .artIcon {
-
-width: 25px;
+  width: 25px;
+  margin-bottom: 34px;
 }
 
 .divisionIzq {
@@ -57,6 +62,9 @@ width: 25px;
 
 .divisionIzqSegundoChild {
   margin-left: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 }
 
 

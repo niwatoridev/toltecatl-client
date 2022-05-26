@@ -46,9 +46,9 @@ export default function App() {
     setUser(user);
   }
 
-  // if (isLoading) {
-  //   return <LoadingComponent />;
-  // }
+  if (isLoading) {
+    return <LoadingComponent />;
+  }
   return (
     <div className="App">
       <Navbar handleLogout={handleLogout} user={user} />

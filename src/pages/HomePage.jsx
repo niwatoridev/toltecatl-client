@@ -7,9 +7,9 @@ import Home3 from "../components/Homepage/HomePartThree/Home3";
 function HomePage() {
   return (
     <div className="App">
-      <header className="App-header">
+      <div className="App-header">
         <img src={background} className="App-Banner" alt="civilizations-banner" />
-      </header>
+      </div>
       <div>
         <Home2/>
       </div>

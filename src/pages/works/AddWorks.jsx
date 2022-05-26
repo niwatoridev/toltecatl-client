@@ -6,6 +6,7 @@ import "./AddWork.css";
 const WorksPage = (props) => {
   
   const artist = props.user?._id
+  const likes = 0
   const [ title, setTitle ] = useState("")
   const [ artType, setArtType ] = useState("Fotografia")
   const [ caption, setCaption ] = useState("")
@@ -87,30 +88,6 @@ const WorksPage = (props) => {
       <label>Genero:  </label>
       <input onChange={handlerGenreChange} type="text" placeholder="¿Que genero es?"/>
   </div>
-  : artType === "Libro" ? 
-  <div>
-      <label>Genero: </label>
-      <select onChange={handlerGenreChange}>
-                        <option value="Accion">Accion</option>
-                        <option value="Aventuras">Aventuras</option>
-                        <option value="Ciencia Ficcion">Ciencia Ficcion</option>
-                        <option value="Comedia">Comedia</option>  
-                        <option value="Documental">Documental</option>  
-                        <option value="Drama">Drama</option>  
-                        <option value="Fantasia">Fantasia</option>  
-                        <option value="Terror">Terror</option>  
-                        <option value="Suspenso">Suspenso</option>  
-                       
-        </select>
-      <br></br>
-      <label>Paginas:  </label>
-      <input onChange={handlerPagesChange} type="number" placeholder="¿Cuantas paginas tiene?"/>
-  </div>
-  : artType === "Poema" ?
-    <div>
-      <label>Cuerpo:  </label>
-      <input onChange={handlerBodyChange} type="text" placeholder="Inserta aqui tu poema"/>
-    </div>
   : <div></div>
   )}
 
@@ -206,6 +183,7 @@ const WorksPage = (props) => {
         title,
         artType,
         workSource,
+        likes,
         content: {
           caption,
           duration,
@@ -218,7 +196,7 @@ const WorksPage = (props) => {
     })
       .then((res) => res.json())
       .then(res => {
-        navigate("/works")
+        navigate(PATHS.PORTFOLIO)
       })
       .catch(console.error)
   }
@@ -242,9 +220,8 @@ const WorksPage = (props) => {
                     <option value="Ilustracion Digital">Ilustracion Digital</option>
                     <option value="Pintura">Pintura</option>
                     <option value="Cortometraje">Cortometraje</option>  
-                    <option value="Cancion">Cancion</option>  
-                    <option value="Libro">Libro</option>  
-                    <option value="Poema">Poema</option>  
+                    <option value="Cancion">Musica</option>  
+                   
                    </select>
                  </label>
                  <input 

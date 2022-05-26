@@ -22,7 +22,7 @@ const Home2 = (props) => {
                   alt='Quetzalcoatl-Draw'
                 />
             </div>
-            <div className="dividerChild2">
+            <div className="dividerChild2part2">
                 <img src={snake} alt='snake-draw' className='snakeImg'/>
                 <Text className="text" fontSize='3xl'>Toltecatl es la primer plataforma hecha por mexicanos para mexicanos enfocada en impulsar las carreras artísticas de sus usuarios, contribuyendo a la difusión y apreciación de su obra mediante la promoción de su trabajo en la plataforma, haciendo accesibles herramientas a los autores, tales como un portafolio digital, y poniéndoles en contacto con posibles compradores de comisiones y mucho mas.</Text>
             </div>

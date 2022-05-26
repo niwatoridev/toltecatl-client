@@ -6,11 +6,35 @@ nav {
   flex-wrap: wrap;
   background: white;
   font-weight: 600;
+  position: fixed;
+    top: 0px;
+    width: 100%;
+    z-index: 10000;
 }
 
+
+.ObrasFeed {
+margin-left: 15px;
+color: #b42f24;
+  text-decoration: none;
+  transition: color 0.2s ease-in-out;
+}
+
+.ObrasFeed + .ObrasFeed {
+  padding: 1em;
+}
+
+.ObrasFeed:hover {
+  color: black;
+}
+
+
 .logoInNav {
-margin: 10px;
-margin-right: 177.215px;
+  display: flex;
+  flex-direction: row;
+  margin: 10px;
+  margin-right: 177.215px;
+  align-items: center;
 
 }
 

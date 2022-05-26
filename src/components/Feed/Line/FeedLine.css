@@ -1,6 +1,7 @@
 .feedLine {
 width: 1000px;
-height: 5000px;
+height: 4825px;
+margin-top: 70px;
 
 display: flex;
 flex-direction: column;

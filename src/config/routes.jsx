@@ -4,10 +4,10 @@ import Login from "../pages/LogIn";
 import Signup from "../pages/Signup";
 import Works from "../pages/works/Works";
 import AddWork from "../pages/works/AddWorks";
-import ProtectedPage from "../pages/ProtectedPage";
 import Feed from "../pages/feed/Feed"
 import * as PATHS from "../utils/paths";
 import Loading from "../components/Loading"
+import WorksPage from "../pages/works/Works";
 
 function validateRoute({isLoading, ...rest}, Component) {
 
@@ -42,8 +42,8 @@ const routes = (props) => {
       element: <AddWork {...props} />,
     },
     {
-      path: PATHS.WORKS,
-      element: <Works {...props} />,
+      path: PATHS.PORTFOLIO,
+      element: <WorksPage {...props} />,
     },
         {
       path: PATHS.FEED,

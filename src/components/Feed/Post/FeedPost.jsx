@@ -9,13 +9,16 @@ import musicIcon from "../../../images/icons/music.png"
 import pinturaIcon from "../../../images/icons/paint-board-and-brush.png"
 import fotoIcon from "../../../images/icons/camera.png"
 import digitalIcon from "../../../images/icons/drawing-tablet.png"
+import Like from "./Like"
 
 function getIndexOfWorks(min, max) {
 return Math.floor(Math.random() * (max - min)) + min;
 }
 
-const FeedPost = () => { 
+const FeedPost = (props) => { 
   
+
+
   const [ works, setWorks ] = useState([])
 
     useEffect(() => {
@@ -31,7 +34,7 @@ const FeedPost = () => {
     },
     []
     )
-    console.log("estos son los works:", (works))
+    
     
     // const indexObtenido = 3
   
@@ -43,10 +46,7 @@ const FeedPost = () => {
   let linkFinal = "https://www.youtube.com/embed/" + extraccion
  
   let workInd = works[indexObtenido]?.artType;
-  
-  console.log("este es el link final:", linkFinal)
-  console.log("este es el artytpe:", workInd)
-  
+    
   return (
   <Fragment>  
   {(workInd === 'Cortometraje') && 
@@ -64,11 +64,12 @@ const FeedPost = () => {
                               </div>
                               <div className="divisionIzqSegundoChild">  
                                 <Heading>{works[indexObtenido]?.title}</Heading>
+                                <Heading size='lg'>{works[indexObtenido]?.artist.name} {works[indexObtenido]?.artist.lastName}</Heading>
                               </div>
                           </div>
                         </div>
                         <div className="derechaCortometraje">
-                            <img className="heartOut" src={heartOut} alt="heart-icon"/>  
+                        <Like {...props}/>   
                         </div>
                     </div>
                 </div>
@@ -88,11 +89,12 @@ const FeedPost = () => {
                               </div>
                               <div className="divisionIzqSegundoChild">  
                                 <Heading>{works[indexObtenido]?.title}</Heading>
+                                <Heading size='lg'>{works[indexObtenido]?.artist.name} {works[indexObtenido]?.artist.lastName}</Heading>
                               </div>
                           </div>
                         </div>
                         <div className="derechaCortometraje">
-                            <img className="heartOut" src={heartOut} alt="heart-icon"/>  
+                        <Like {...props}/> 
                         </div>
                     </div>
                 </div>
@@ -112,11 +114,12 @@ const FeedPost = () => {
                               </div>
                               <div className="divisionIzqSegundoChild">  
                                 <Heading>{works[indexObtenido]?.title}</Heading>
+                                <Heading size='lg'>{works[indexObtenido]?.artist.name} {works[indexObtenido]?.artist.lastName}</Heading>
                               </div>
                           </div>
                         </div>
                         <div className="derechaCortometraje">
-                            <img className="heartOut" src={heartOut} alt="heart-icon"/>  
+                        <Like {...props}/>  
                         </div>
                     </div>
                 </div>
@@ -136,11 +139,12 @@ const FeedPost = () => {
                               </div>
                               <div className="divisionIzqSegundoChild">  
                                 <Heading>{works[indexObtenido]?.title}</Heading>
+                                <Heading size='lg'>{works[indexObtenido]?.artist.name} {works[indexObtenido]?.artist.lastName}</Heading>
                               </div>
                           </div>
                         </div>
                         <div className="derechaCortometraje">
-                            <img className="heartOut" src={heartOut} alt="heart-icon"/>  
+                        <Like {...props}/>
                         </div>
                     </div>
                 </div>
@@ -160,11 +164,12 @@ const FeedPost = () => {
                               </div>
                               <div className="divisionIzqSegundoChild">  
                                 <Heading>{works[indexObtenido]?.title}</Heading>
+                                <Heading size='lg'>{works[indexObtenido]?.artist.name} {works[indexObtenido]?.artist.lastName}</Heading>
                               </div>
                           </div>
                         </div>
                         <div className="derechaCortometraje">
-                            <img className="heartOut" src={heartOut} alt="heart-icon"/>  
+                        <Like {...props}/> 
                         </div>
                     </div>
                 </div>

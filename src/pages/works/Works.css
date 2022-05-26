@@ -1,0 +1,52 @@
+.portafolioMatrix {
+margin-top: 100px;
+}
+
+.portfolioGrid {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    
+}
+
+.portfolioCard {
+    margin-left: 15px;
+    margin-top: 50px;
+    /* border: 1px solid #f1dccd; */
+    padding: 10px;
+    border-radius: 10px;
+    /* background-color: #fde8da; */
+    max-height: 288px;
+    max-width: 374px;
+}
+
+.fotoPortfolio {
+    width: 350px;
+    height: 200px;
+  object-fit: cover;
+}
+
+.textPortfolio {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.icon {
+    width: 20px;
+    margin-left: 5px;
+}
+
+.likeDiv {
+    display: flex;
+    flex-direction: row;
+}
+
+.artIconPort {
+    width: 15px;
+  }
+
+  .textoPortafolio {
+      margin-left: 5px;
+  }

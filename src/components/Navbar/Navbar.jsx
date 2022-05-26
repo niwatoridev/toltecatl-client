@@ -14,6 +14,9 @@ const Navbar = (props) => {
         <div className="logoInNav">
         <Link to={PATHS.HOMEPAGE}><img className="logoNav" src={logo} alt="logo"></img>
         </Link>
+        <Link to={PATHS.FEED} className="ObrasFeed">
+                    Explorar Obras
+                  </Link>
         </div>
         <div>
           <Stack spacing={2}>
@@ -33,9 +36,13 @@ const Navbar = (props) => {
                   {/* <Link to={PATHS.PROTECTEDPAGE} className="authLink">
                     Protected Page
                   </Link> */}
-                  <Link to={PATHS.WORKS} className="workLink">
-                    Tu Perfil
+                  <Link {...props} to={PATHS.PORTFOLIO} className="workLink">
+                    Tu Portafolio
                   </Link>
+                  <Link to={PATHS.ADDWORK} className="workLink">
+                    Añadir Obra
+                  </Link>
+                    
                   <button className="nav-logoutbtn" onClick={props.handleLogout}>
                     Cerrar Sesión
                   </button>
