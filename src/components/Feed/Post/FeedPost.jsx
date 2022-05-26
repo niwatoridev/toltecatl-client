@@ -24,6 +24,7 @@ const FeedPost = (props) => {
     useEffect(() => {
       fetch(`${process.env.REACT_APP_SERVER_URL}/feed`, {
       method: "GET",
+      mode:'cors',
       headers: {
         'Accept': 'application/json',
         'Content-Type': 'application/json'

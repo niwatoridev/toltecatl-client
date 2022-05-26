@@ -15,6 +15,7 @@ let linkFetch = `${process.env.REACT_APP_SERVER_URL}/portfolio/` + props.user._i
 useEffect(() => {
   fetch(linkFetch, {
   method: "GET",
+  mode:'cors',
   headers: {
     'Accept': 'application/json',
     'Content-Type': 'application/json'

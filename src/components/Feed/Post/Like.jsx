@@ -12,6 +12,7 @@ const Like = (props) => {
 // e.preventDefault();
 //     fetch(`${process.env.REACT_APP_SERVER_URL}`/works', {
 //       method: "POST",
+//       mode:'cors',
 //       headers: {
 //         'Accept': 'application/json',
 //         'Content-Type': 'application/json'
