@@ -4,6 +4,11 @@ import { useNavigate } from "react-router-dom";
 import "./auth.css";
 import * as PATHS from "../utils/paths";
 import * as USER_HELPERS from "../utils/userToken";
+import { Heading, Text, Input, Button } from "@chakra-ui/react"
+import quetzaleft from "../images/others/q-head-left.png"
+import quetzalright from "../images/others/q-head.png"
+import snake from "../images/others/snake.png"
+
 
 export default function Signup({ authenticate }) {
   const [form, setForm] = useState({
@@ -48,45 +53,63 @@ export default function Signup({ authenticate }) {
   }
 
   return (
-    <div>
-      <h1>Registrate</h1>
+      <div className="matrixSign">
+          <div>
+              <img className="qhead2" src={snake} alt="quetzal-head"></img>
+          </div>
+          <div className="tituloSign">
+              <div>
+                  <img className="qhead" src={quetzaleft} alt="quetzal-head"></img>
+              </div>
+              <div className="divisorNahua">
+                  <div>
+                    <Heading>Mah cualli xihualacan</Heading>
+                  </div> 
+                  <div>
+                    <Heading size='xs'>(Bienvenido, en Nahuatl)</Heading>
+                  </div> 
+              </div>
+              <div>
+                  <img className="qhead" src={quetzalright} alt="quetzal-head"></img>
+              </div>
+          </div>
       <form onSubmit={handleFormSubmission} className="auth__form">
-      <label htmlFor="input-name">Nombre</label>
-        <input
-          id="input-name"
+      <Heading size='md'  htmlFor="Input-name">Nombre</Heading>
+        <Input
+          id="Input-name"
           type="text"
           name="name"
-          placeholder="Tu Nombre"
+          placeholder="¿Como te llamas?"
           value={name}
           onChange={handleInputChange}
           required
         /> 
         
-        <label htmlFor="input-name">Apellido</label>
-        <input
-          id="input-lastName"
+        <Heading size='md' className="inputSign" htmlFor="Input-name">Apellido</Heading>
+        <Input
+          id="Input-lastName"
           type="text"
           name="lastName"
-          placeholder="Tu Apellido"
+          placeholder="¿Y tu apellido?"
           value={lastName}
           onChange={handleInputChange}
           required
         />           
         
-        <label htmlFor="input-username">Usuario</label>
-        <input
-          id="input-username"
+        <Heading size='md' className="inputSign" htmlFor="Input-username">Usuario</Heading>
+        <Input
+          id="Input-username"
           type="text"
           name="username"
-          placeholder="Usuario Deseado"
+          placeholder="Servira para Iniciar Sesion"
           value={username}
           onChange={handleInputChange}
           required
         />
 
-        <label htmlFor="input-password">Contraseña</label>
-        <input
-          id="input-password"
+        <Heading size='md' className="inputSign" htmlFor="Input-password">Contraseña</Heading>
+        <Input
+          id="Input-password"
           type="password"
           name="password"
           placeholder="Contraseña Deseada"
@@ -96,9 +119,9 @@ export default function Signup({ authenticate }) {
           minLength="8"
         />
 
-        <label htmlFor="input-name">Email</label>
-                <input
-                  id="input-email"
+        <Heading size='md' className="inputSign" htmlFor="Input-name">Email</Heading>
+                <Input
+                  id="Input-email"
                   type="text"
                   name="email"
                   placeholder="Tu Email"
@@ -116,9 +139,9 @@ export default function Signup({ authenticate }) {
           </div>
         )}
 
-        <button className="button__submit" type="submit">
-          Submit
-        </button>
+        <Button colorScheme='green' className="button__submit" type="submit">
+          Crear Cuenta
+        </Button>
       </form>
     </div>
   );

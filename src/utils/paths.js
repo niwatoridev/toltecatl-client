@@ -5,3 +5,5 @@ export const PROTECTEDPAGE = "/protected";
 export const ADDWORK = "/works/add"
 export const FEED = "/feed"
 export const PORTFOLIO = "/portfolio"
+export const EDITWORK = "/works/edit/:id"
+export const CONFIRMDELETEWORK = "/works/delete/:id"

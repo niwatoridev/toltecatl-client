@@ -8,6 +8,8 @@ import Feed from "../pages/feed/Feed"
 import * as PATHS from "../utils/paths";
 import Loading from "../components/Loading"
 import WorksPage from "../pages/works/Works";
+import EditWork from "../pages/works/EditWork";
+import DeleteWork from "../pages/works/DeleteWork";
 
 function validateRoute({isLoading, ...rest}, Component) {
 
@@ -36,6 +38,14 @@ const routes = (props) => {
     {
       path: PATHS.LOGINPAGE,
       element: <Login {...props} />,
+    },
+    {
+      path: PATHS.EDITWORK,
+      element: <EditWork {...props} />,
+    },
+    {
+      path: PATHS.CONFIRMDELETEWORK,
+      element: <DeleteWork {...props} />,
     },
     {
       path: PATHS.ADDWORK,

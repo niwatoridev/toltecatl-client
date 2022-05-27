@@ -4,6 +4,10 @@ import { useNavigate } from "react-router-dom";
 import "./Signup";
 import * as PATHS from "../utils/paths";
 import * as USER_HELPERS from "../utils/userToken";
+import quetzaleft from "../images/others/q-head-left.png"
+import quetzalright from "../images/others/q-head.png"
+import snake from "../images/others/snake.png"
+import { Heading, Text, Input, Button } from "@chakra-ui/react"
 
 export default function LogIn({ authenticate }) {
   const [form, setForm] = useState({
@@ -37,43 +41,77 @@ export default function LogIn({ authenticate }) {
   }
 
   return (
-    <div>
-      <h1>Log In</h1>
-      <form onSubmit={handleFormSubmission} className="signup__form">
-        <label htmlFor="input-username">Username</label>
-        <input
-          id="input-username"
-          type="text"
-          name="username"
-          placeholder="username"
-          value={username}
-          onChange={handleInputChange}
-          required
-        />
-
-        <label htmlFor="input-password">Password</label>
-        <input
-          id="input-password"
-          type="password"
-          name="password"
-          placeholder="Password"
-          value={password}
-          onChange={handleInputChange}
-          required
-          minLength="8"
-        />
-
-        {error && (
-          <div className="error-block">
-            <p>There was an error submiting the form:</p>
-            <p>{error.message}</p>
+<div className="matrixSign">
+        <div>
+        <div className="matrixSign">  
+          <div>
+              <img className="qhead2" src={snake} alt="quetzal-head"></img>
           </div>
-        )}
+          <div className="tituloSign">
+              <div>
+                  <img className="qhead" src={quetzaleft} alt="quetzal-head"></img>
+              </div>
+              <div className="divisorNahua">
+                  <div>
+                    <Heading>Mah xiyolpaquican ini mosentiliztli</Heading>
+                  </div> 
+                  <div>
+                    <Heading size='xs'>(Que disfruten esta visita, en Nahuatl)</Heading>
+                  </div> 
+              </div>
+              <div>
+                  <img className="qhead" src={quetzalright} alt="quetzal-head"></img>
+              </div>
+          </div>
+          </div>
+        </div>
+        <div> 
+            <form onSubmit={handleFormSubmission} className="auth__form2">
+            <Heading className="inputSign" size='md' htmlFor="Input-username">Nombre de Usuario</Heading>
+            <Input
+              id="Input-username"
+              type="text"
+              name="username"
+              placeholder="Espero que no se te haya olvidado"
+              value={username}
+              onChange={handleInputChange}
+              required
+            />
 
-        <button className="button__submit" type="submit">
-          Submit
-        </button>
-      </form>
-    </div>
+            <Heading className="inputSign" size='md' htmlFor="Input-password">Password</Heading>
+            <Input
+              id="Input-password"
+              type="password"
+              name="password"
+              placeholder="Contraseña"
+              value={password}
+              onChange={handleInputChange}
+              required
+              minLength="8"
+            />
+
+            {error && (
+              <div className="error-block">
+                <p>There was an error submiting the form:</p>
+                <p>{error.message}</p>
+              </div>
+            )}
+
+            <Button colorScheme="green" className="button__submit" type="submit">
+              Ingresar
+            </Button>
+          </form>
+            
+
+
+
+        </div>
+</div>
+
+
+
+
+  
   );
 }
+

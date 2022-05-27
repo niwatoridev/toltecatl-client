@@ -2,6 +2,7 @@ import React, { Fragment, useEffect, useState } from "react";
 import * as PATHS from "../../utils/paths";
 import { Link } from "react-router-dom";
 import { Button, ButtonGroup, Heading, Image, Text } from '@chakra-ui/react'
+import { DeleteIcon, EditIcon } from '@chakra-ui/icons'
 import "./Works.css"
 import CardPortfolio from "../../components/CardPortfolio/CardPortfolio";
 import heartOut from "../../images/icons/hearthOut.png"
@@ -63,7 +64,8 @@ useEffect(() => {
          let linkFinal = work?.workSource?.split("=")[1]
           return <Fragment>  
   {(work.artType === 'Cortometraje') && 
-              <div className="portfolioCard"> 
+            <div className="portfolioCard"> 
+              <div className="portfolioCardLeft"> 
                 <div className="parte1PostPort"> 
                     <div className="parte1PostCortometraje">
                         <div>
@@ -82,10 +84,17 @@ useEffect(() => {
                         </div> 
                     </div>
               </div>
+              <div className="portfolioCardRight">
+              <Link key={work._id} {...props} work={work} to={`/works/edit/${work._id}`}><EditIcon/></Link>
+              <Link key={work._id} {...props} works={works} to={`/works/delete/${work._id}`}><DeleteIcon/></Link> 
+                       
+              </div>
+        </div>
                
   }
   {(work.artType === 'Cancion') && 
-                <div className="portfolioCard"> 
+          <div className="portfolioCard"> 
+                <div className="portfolioCardLeft">
                   <div className="parte1PostPort">
                       <div className="parte1PostCortometraje">
                         <div>
@@ -104,10 +113,16 @@ useEffect(() => {
                         </div>
                     </div>
                 </div>
+                <div className="portfolioCardRight">
+                <Link key={work._id} {...work} to={`/works/edit/${work._id}`}><EditIcon/></Link>
+                <Link key={work._id} {...props} works={works} to={`/works/delete/${work._id}`}><DeleteIcon/></Link>
+                </div>
+          </div>
   }  
                         
   {( work.artType === 'Pintura') &&  
   <div className="portfolioCard"> 
+      <div className="portfolioCardLeft">
                   <div className="parte1PostPort">
                       <div className="parte1PostCortometraje">
                         <div>
@@ -125,10 +140,16 @@ useEffect(() => {
                         <img className="icon" src={heart} alt="heart-icon"/>  
                         </div>
                     </div>
-                </div>
+            </div>
+            <div className="portfolioCardRight">
+            <Link key={work._id} {...work} to={`/works/edit/${work._id}`}><EditIcon/></Link>
+            <Link key={work._id} {...props} works={works} to={`/works/delete/${work._id}`}><DeleteIcon/></Link>
+                </div>  
+    </div>
     }
   {( work.artType === 'Fotografia') &&  
-  <div className="portfolioCard"> 
+  <div className="portfolioCard">
+      <div className="portfolioCardLeft">
                   <div className="parte1PostPort">
                       <div className="parte1PostCortometraje">
                         <div>
@@ -147,9 +168,15 @@ useEffect(() => {
                         </div>
                     </div>
                 </div>
+                <div className="portfolioCardRight">
+                <Link key={work._id} {...work} to={`/works/edit/${work._id}`}><EditIcon/></Link>
+                <Link key={work._id} {...props} works={works} to={`/works/delete/${work._id}`}><DeleteIcon/></Link>
+                </div> 
+    </div>
     }
     {( work.artType === 'Ilustracion Digital') &&  
-    <div className="portfolioCard"> 
+    <div className="portfolioCard">
+    <div className="portfolioCardLeft"> 
                   <div className="parte1PostPort">
                       <div className="parte1PostCortometraje">
                         <div>
@@ -168,6 +195,12 @@ useEffect(() => {
                         </div>
                     </div>
                 </div>
+                <div className="portfolioCardRight">
+                <Link key={work._id} {...props} works={works} to={`/works/edit/${work._id}`}><EditIcon/></Link>
+                <Link key={work._id} {...props} works={works} to={`/works/delete/${work._id}`}><DeleteIcon/></Link>
+                </div> 
+
+      </div>
     }
       
 </Fragment>
