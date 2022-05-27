@@ -6,14 +6,14 @@
 
 .addWorkMain {
   display: flex;
-  flex-direction: row;
-  justify-content: center;
-  margin-top: 150px;
+    flex-direction: column;
+    margin-top: 150px;
+    align-items: center;
 }
 
 .previewAddWork {
   max-width: 500px;
-  margin-left: 100px;
+    margin-top: 50px;
 }
 
 .imgAddWorkPreview {
@@ -22,9 +22,18 @@
 
 .framePreview {
   display: flex;
-  flex-direction: row;
+    flex-direction: column;
+    align-items: center;
 }
 
 .framePreviewChildTwo{
 margin-left: 15px;
+}
+
+.headerForm {
+  margin-bottom: 50px;
+}
+
+.formContent {
+  margin-bottom: 20px;
 }

@@ -4,32 +4,44 @@ import heart from "../../../images/icons/heart.png"
 
 
 const Like = (props) => {
-// console.log("estos son los props:", props)
 
-// function addCount() { (e) => {
-// console.log("like", props.user._id)
+const [ liked, setLiked] = useState(false)
 
-// e.preventDefault();
-//     fetch(`${process.env.REACT_APP_SERVER_URL}`/works', {
-//       method: "POST",
-//       mode:'cors',
-//       headers: {
-//         'Accept': 'application/json',
-//         'Content-Type': 'application/json'
-//       },
-//       body: JSON.stringify({
-//         userid: props.user?._id
-        
-//       })
-//     })
-//       .then((res) => res.json())
-//       .catch(console.error)
-//   }
+console.log("estos son los props:", props)
+console.log("esta likeado?", liked)
 
-return (
-    <img className="heartOut" src={heartOut} alt="heart-icon"/>  
-    )
+function addCount(e) {
+  e.preventDefault()
+  setLiked(!liked)
+  console.log("si esta sirviendo", liked)
+    fetch(`${process.env.REACT_APP_SERVER_URL}/like`, {
+      method: "POST",
+      mode:'cors',
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        userid: props.user?._id
+      })
+    })
+      .then(res => res.json())
+      .catch(console.error)
+  }
+
+
+  return <Fragment>
+  {(liked === true) &&  
+    <img onClick={addCount} className="heartOut" src={heart} alt="heart-icon"/>  
+  }
+  {(liked === false) &&  
+    <img onClick={addCount} className="heartOut" src={heartOut} alt="heart-icon"/>  
+  }
+    </Fragment>
+    
 
 }
+
+
 
 export default Like;

@@ -38,7 +38,18 @@ useEffect(() => {
 )
 
 
+  
+  // let link = works.workSource;
+  // let indice = link?.indexOf("=");
+  // let extraccion = link?.substring(indice + 1);
+  // let linkFinal = "https://www.youtube.com/embed/" + extraccion
 
+
+  // console.log("este es el works:", works)
+  // console.log("este es el link:", link)
+  // console.log("este es el indice:", indice)
+  // console.log("este es el extraccion:", extraccion)
+  // console.log("este es el link final:", linkFinal)
 
   return (
     <div className="portafolioMatrix">
@@ -49,13 +60,14 @@ useEffect(() => {
       <div className="portfolioGrid">
       {
         works.map(work => {
+          
           return <Fragment>  
   {(work.artType === 'Cortometraje') && 
               <div className="portfolioCard"> 
                 <div className="parte1PostPort"> 
                     <div className="parte1PostCortometraje">
                         <div>
-                          <iframe width="350" height="200" src={work.workSource} title="YouTube Video" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+                          <iframe width="350" height="200" src="https://www.youtube.com/embed/RxKVWs_qYBk" title="YouTube Video" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
                         </div>
                     </div>
                   </div>
@@ -77,7 +89,7 @@ useEffect(() => {
                   <div className="parte1PostPort">
                       <div className="parte1PostCortometraje">
                         <div>
-                          <iframe width="350" height="200" src={work.workSource} title="YouTube Video" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+                          <iframe width="350" height="200" src="https://www.youtube.com/embed/RxKVWs_qYBk" title="YouTube Video" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
                         </div>
                     </div>
                   </div>
