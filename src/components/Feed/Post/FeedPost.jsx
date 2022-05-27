@@ -47,7 +47,11 @@ const FeedPost = (props) => {
   let linkFinal = "https://www.youtube.com/embed/" + extraccion
  
   let workInd = works[indexObtenido]?.artType;
+  let workId = works[indexObtenido]?._id
+
+
     
+
   return (
   <Fragment>  
   {(workInd === 'Cortometraje') && 
@@ -70,7 +74,7 @@ const FeedPost = (props) => {
                           </div>
                         </div>
                         <div className="derechaCortometraje">
-                        <Like {...props}/>   
+                        <Like {...props} workId={workId}/>   
                         </div>
                     </div>
                 </div>
@@ -95,7 +99,7 @@ const FeedPost = (props) => {
                           </div>
                         </div>
                         <div className="derechaCortometraje">
-                        <Like {...props}/> 
+                        <Like {...props} workId={workId}/> 
                         </div>
                     </div>
                 </div>
@@ -120,7 +124,7 @@ const FeedPost = (props) => {
                           </div>
                         </div>
                         <div className="derechaCortometraje">
-                        <Like {...props}/>  
+                        <Like {...props} workId={workId}/>  
                         </div>
                     </div>
                 </div>
@@ -145,7 +149,7 @@ const FeedPost = (props) => {
                           </div>
                         </div>
                         <div className="derechaCortometraje">
-                        <Like {...props}/>
+                        <Like {...props} workId={workId}/>
                         </div>
                     </div>
                 </div>
@@ -170,7 +174,7 @@ const FeedPost = (props) => {
                           </div>
                         </div>
                         <div className="derechaCortometraje">
-                        <Like {...props}/> 
+                        <Like {...props} workId={workId}/> 
                         </div>
                     </div>
                 </div>

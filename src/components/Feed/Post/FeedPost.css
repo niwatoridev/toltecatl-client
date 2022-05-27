@@ -32,7 +32,7 @@
 
 .derechaCortometraje {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   margin-right: 50px;
   
 }

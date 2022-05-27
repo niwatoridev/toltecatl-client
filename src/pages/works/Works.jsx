@@ -60,14 +60,14 @@ useEffect(() => {
       <div className="portfolioGrid">
       {
         works.map(work => {
-          
+         let linkFinal = work?.workSource?.split("=")[1]
           return <Fragment>  
   {(work.artType === 'Cortometraje') && 
               <div className="portfolioCard"> 
                 <div className="parte1PostPort"> 
                     <div className="parte1PostCortometraje">
                         <div>
-                          <iframe width="350" height="200" src="https://www.youtube.com/embed/RxKVWs_qYBk" title="YouTube Video" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+                          <iframe width="350" height="200" src={`https://www.youtube.com/embed/${linkFinal}`} title="YouTube Video" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
                         </div>
                     </div>
                   </div>
@@ -89,7 +89,7 @@ useEffect(() => {
                   <div className="parte1PostPort">
                       <div className="parte1PostCortometraje">
                         <div>
-                          <iframe width="350" height="200" src="https://www.youtube.com/embed/RxKVWs_qYBk" title="YouTube Video" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+                          <iframe width="350" height="200" src={`https://www.youtube.com/embed/${linkFinal}`} title="YouTube Video" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
                         </div>
                     </div>
                   </div>
