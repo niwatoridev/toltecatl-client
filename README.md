@@ -1,5 +1,5 @@
 <h1>Toltecatl</h1>        
-<h2>El HUB para artistas Mexicanos</h2>
+<h2>The Mexican Artist HUB</h2>
 
 
 <h3>Features</h3>
