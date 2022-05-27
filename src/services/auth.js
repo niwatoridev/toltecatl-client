@@ -25,6 +25,9 @@ function successStatus(res) {
 // creates a basic url for every request in this file
 const authService = axios.create({
   baseURL: `${process.env.REACT_APP_SERVER_URL}/auth`,
+  headers: {
+    "Access-Control-Allow-Origin": "*"
+  }
 });
 
 export function login(credentials) {
@@ -39,6 +42,7 @@ export function getLoggedIn() {
     .get(`session`, {
       headers: {
         Authorization: USER_HELPERS.getUserToken(),
+        "Access-Control-Allow-Origin": "*"
       },
     })
     .then(successStatus)
